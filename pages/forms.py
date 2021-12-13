@@ -3,9 +3,9 @@ from django import forms
 
 class VancoForm(forms.Form):
     INDICATION_CHOICES = [
+        ("empiric", "Empiric"),
         ("bacteremia", "Bacteremia"),
         ("cellulitis", "Cellulitis"),
-        ("empiric", "Empiric"),
         ("endocarditis", "Endocarditis"),
         ("meningitis", "Meningitis"),
         ("osteomyelitis", "Osteomyelitis"),
@@ -13,7 +13,7 @@ class VancoForm(forms.Form):
         ("sepsis", "Sepsis"),
         ("surgical", "Surgical prophylaxis"),
     ]
-    GOAL_CHOICES = [("10-15", "10-15 mcg/mL"), ("15-20", "15-20 mcg/mL")]
+    GOAL_CHOICES = [("15-20", "15-20 mcg/mL"), ("10-15", "10-15 mcg/mL")]
 
     actual_body_weight = forms.IntegerField(
         required=True,
