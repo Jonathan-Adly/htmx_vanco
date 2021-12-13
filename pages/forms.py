@@ -15,7 +15,6 @@ class VancoForm(forms.Form):
     ]
     GOAL_CHOICES = [("10-15", "10-15 mcg/mL"), ("15-20", "15-20 mcg/mL")]
 
-    physician = forms.CharField(required=False)
     actual_body_weight = forms.IntegerField(
         required=True,
         label="",
