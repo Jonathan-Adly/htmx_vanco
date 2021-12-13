@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Favicon and title -->
+
+  <title>Antibiotic Calculator </title>
+
+  <!-- Halfmoon CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
+</head>
+
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-set-preferred-mode-onload="true">
+  <!-- Modals go here -->   <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
+  {% include 'components/crcl_modal.html' %}
+
+  <!-- Page wrapper start -->
+  <div class="page-wrapper with-navbar">
+
+    <!-- Sticky alerts (toasts), empty container -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+    <div class="sticky-alerts"></div>
+    <!-- navbar here -->
+    {% include 'components/navbar.html' %}
+
+
+    <div class="content-wrapper">
+      {% block content %}
+
+      {% endblock content %}
+    </div>
+
+
+  </div>
+  <!-- Page wrapper end -->
+
+  <!-- Halfmoon JS -->
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+
+  <!-- HTMX CDN -->
+   <script src="https://unpkg.com/htmx.org@1.1.0"></script>
+
+   <!-- csrf script-->
+    <script>
+      document.body.addEventListener('htmx:configRequest', (event) => {
+        event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+      })
+    </script>
+</body>
+</html>

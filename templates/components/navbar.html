@@ -1,0 +1,31 @@
+<nav class="navbar" hx-boost="true">
+    <!-- big font on big screens-->
+   <a href="{% url 'home' %}" class="navbar-brand ml-10 hidden-sm-and-down">
+        Vancomycin Dosing
+    </a>
+    <!-- small font on small screens -->
+    <a href="{% url 'home' %}" class="navbar-brand ml-10 font-size-12 hidden-md-and-up">
+        Vancomycin Dosing
+   </a>
+               
+         <ul class="navbar-nav">
+         <li class="nav-item"> 
+              <a href= "{% url 'home' %}" class="nav-link">Home</a>
+         </li>
+   
+         <li class="nav-item"> 
+            <a href= "#" class="nav-link"> About </a>
+       </li>
+          </ul>
+               
+   <div class="custom-switch ml-auto navbar-text d-inline-block">      
+   <input 
+   type="checkbox" 
+   id="switch-1" 
+   value="" 
+   onclick="halfmoon.toggleDarkMode()">
+      <label for="switch-1" class= "font-size-12">Dark Mode</label>
+   </div>
+                   
+        
+   </nav>

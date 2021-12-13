@@ -1,0 +1,49 @@
+
+<div class="modal" id="crcl-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <a href="#" class="close" role="button" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+        <h5 class="modal-title">CrCl Calculator</h5>
+        <form>
+            <div class="input-group">
+                    {{crcl_form.age}}
+                <div class="input-group-append">
+                    <span class="input-group-text"> Years </span>
+                </div>
+            </div>
+            <div class="input-group mt-10">
+                {{crcl_form.height}}
+            <div class="input-group-append">
+                <span class="input-group-text"> Inches </span>
+            </div>
+        </div>
+        <div class="input-group mt-10">
+            Scr: {{crcl_form.scr}}
+            <div class="input-group-append">
+                <span class="input-group-text"> mg/dL </span>
+            </div>
+            </div>
+        <div class="mt-10 input-group">
+                {{crcl_form.weight}}
+                <div class="input-group-append">
+                    <span class="input-group-text"> Kgs </span>
+                </div>
+        </div>
+        <div class="mt-10"> 
+            {% for radio in crcl_form.gender %}
+                <div class="custom-radio d-inline-block mr-10">       
+                {{ radio }}
+                </div>
+            {% endfor %}
+        </div>
+       
+        <div class="text-right mt-20">
+          <a href="#" class="btn mr-5" role="button">Close</a>
+          <a href="#" class="btn btn-primary" role="button">Calculate</a>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>

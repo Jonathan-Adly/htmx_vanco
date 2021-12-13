@@ -1,0 +1,29 @@
+{% load crispy_forms_tags %}
+<h2 class="text-center"> Vancomycin dosing Protocol </h2>
+<div class="content">
+    <form action="..." method="...">
+        <div class="form-row align-items-center h-50">
+            <div class="col-sm-5 mr-5">
+                {{form.indication|as_crispy_field}}
+            </div>
+            <div class="col-sm-5">
+                {{form.goal_trough|as_crispy_field}}
+            </div>
+        </div>
+        <div class="form-row align-items-center h-50">
+            <div class="col-sm-5 mr-5 input-group">
+                {{form.crcl}}
+                <div class="input-group-append">
+                    <span class="input-group-text"> ml/min</span>
+                </div>
+            </div>
+            <div class="col-sm-5 input-group">
+                {{form.actual_body_weight}}
+                <div class="input-group-append">
+                    <span class="input-group-text"> kgs</span>
+                </div>
+            </div>
+        </div>
+        <a href="#crcl-modal"> Calculate CrCl </a>
+    </form>
+</div>
