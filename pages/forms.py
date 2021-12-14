@@ -42,8 +42,6 @@ class CrCLForm(forms.Form):
         max_digits=4,
         decimal_places=2,
         required=True,
-        widget=forms.NumberInput(attrs={"placheholder": "Serum Creatine"}),
-        label="Scr",
     )
     weight = forms.IntegerField(
         required=True,
